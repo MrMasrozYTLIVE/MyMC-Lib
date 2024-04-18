@@ -2,17 +2,15 @@
   "name": "mymc-lib",
   "version": "1.0.0",
   "author": "MiTask",
-  "description": "Library for my-mc.link api",
-  "keywords": ["mymc", "my-mc"],
+  "repository": "https://github.com/MrMasrozYTLIVE/MyMC-Lib",
   "module": "src/index.ts",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
+  "dependencies": {
+    "unirest": "^0.6.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
-  "dependencies": {
-    "unirest": "^0.6.0"
-  }
+  "description": "Library for my-mc.link api",
+  "keywords": ["mymc", "my-mc"],
+  "type": "module"
 }
