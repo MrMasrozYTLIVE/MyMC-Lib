@@ -1,6 +1,8 @@
 # Library for my-mc.link api
 Just a simple library that lets you work with my-mc.link API
 
+Java version of the library: https://github.com/MrMasrozYTLIVE/MyMC-Java-Lib
+
 How to use:
 ```javascript
 const myMcLink = new MyMCLib("API_KEY_HERE");
