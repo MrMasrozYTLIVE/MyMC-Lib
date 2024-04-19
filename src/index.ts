@@ -1,8 +1,7 @@
 // @ts-ignore
-import unirest from 'unirest';
-import {ApiEndpoint} from "./ApiEndpoint.ts";
+import unirest from "unirest";
 
-export class MyMCLib {
+export default class MyMCLib {
     private readonly token: string;
 
     constructor(token: string | undefined) {
@@ -157,4 +156,31 @@ export class ApiUtils {
                 });
         });
     }
+}
+
+export enum ApiEndpoint {
+    HELLO = 'hello',
+    TIME = 'time',
+    STATS = 'stats',
+    LOG = 'log',
+    START = 'start',
+    STOP = 'stop',
+    RESTART = 'restart',
+    MY_LINK = 'my-link',
+    MY_SFTP = 'my-sftp',
+    MY_HASH = 'my-hash',
+    MY_HASH_SFTP = 'my-hash-sftp',
+    LIST_PLAYERS = 'list-players',
+    WEBSITE = 'website',
+    MAP = 'map',
+    BAN = 'ban',
+    UNBAN = 'unban',
+    SAY = 'say',
+    TELL = 'tell',
+    CONSOLE = 'console',
+    GIVE = 'give',
+    INSTALL = 'install',
+    UNINSTALL = 'uninstall',
+    SEARCH = 'search',
+    MOD_LIST = 'mod-list'
 }

@@ -1,9 +1,10 @@
 {
   "name": "mymc-lib",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "author": "MiTask",
   "repository": "https://github.com/MrMasrozYTLIVE/MyMC-Lib",
-  "module": "src/index.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "dependencies": {
     "unirest": "^0.6.0"
   },
