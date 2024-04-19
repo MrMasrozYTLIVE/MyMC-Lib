@@ -1,6 +1,6 @@
 {
   "name": "mymc-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "MiTask",
   "repository": "https://github.com/MrMasrozYTLIVE/MyMC-Lib",
   "module": "src/index.ts",

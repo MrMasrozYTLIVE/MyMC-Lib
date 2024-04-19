@@ -14,11 +14,7 @@ export class MyMCLib {
     }
 
     private async verifyToken() {
-        const res: any = await ApiUtils.getRequest(ApiEndpoint.HELLO, this.token);
-        const success: boolean = res.success === undefined;
-        const message: string = res.message;
-
-        return {'success': success, 'message': message};
+        return await ApiUtils.getRequest(ApiEndpoint.HELLO, this.token);
     }
 
     public async getTime() {
@@ -113,14 +109,14 @@ export class MyMCLib {
         return await ApiUtils.postRequest(ApiEndpoint.UNINSTALL, this.token, {"mod": modID});
     }
 
-    public async searchMod(modName: string, offset: number = 0) {
-        return await ApiUtils.postRequest(ApiEndpoint.UNINSTALL, this.token, {"mod": modName, "offset": offset});
+    public async getInstalledMods() {
+        return await ApiUtils.getRequest(ApiEndpoint.MOD_LIST, this.token);
     }
 }
 
 export class ApiUtils {
     static getRequest(endpoint: ApiEndpoint, token: string) {
-        return new Promise<string>((resolve, reject) => {
+        return new Promise<any>((resolve, reject) => {
             unirest
                 .get('https://api.my-mc.link/' + endpoint)
                 .headers({'Accept': 'application/json', 'Content-Type': 'application/json', 'x-my-mc-auth': token})
@@ -134,7 +130,7 @@ export class ApiUtils {
     }
 
     static deleteRequest(endpoint: ApiEndpoint, token: string) {
-        return new Promise<string>((resolve, reject) => {
+        return new Promise<any>((resolve, reject) => {
             unirest
                 .delete('https://api.my-mc.link/' + endpoint)
                 .headers({'Accept': 'application/json', 'Content-Type': 'application/json', 'x-my-mc-auth': token})
@@ -148,7 +144,7 @@ export class ApiUtils {
     }
 
     static async postRequest(endpoint: ApiEndpoint, token: string, data: {}) {
-        return new Promise<string>((resolve, reject) => {
+        return new Promise<any>((resolve, reject) => {
             unirest
                 .post('https://api.my-mc.link/' + endpoint)
                 .headers({'Accept': 'application/json', 'Content-Type': 'application/json', 'x-my-mc-auth': token})

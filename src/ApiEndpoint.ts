@@ -21,5 +21,6 @@ export enum ApiEndpoint {
     GIVE = 'give',
     INSTALL = 'install',
     UNINSTALL = 'uninstall',
-    SEARCH = 'search'
+    SEARCH = 'search',
+    MOD_LIST = 'mod-list'
 }
