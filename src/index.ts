@@ -44,16 +44,8 @@ export default class MyMCLib {
         return await ApiUtils.getRequest(ApiEndpoint.MY_LINK, this.token);
     }
 
-    public async deleteMyLink() {
-        return await ApiUtils.deleteRequest(ApiEndpoint.MY_LINK, this.token);
-    }
-
     public async createLinkSFTP() {
         return await ApiUtils.getRequest(ApiEndpoint.MY_SFTP, this.token);
-    }
-
-    public async deleteLinkSFTP() {
-        return await ApiUtils.deleteRequest(ApiEndpoint.MY_SFTP, this.token);
     }
 
     public async getConnectionHash() {
